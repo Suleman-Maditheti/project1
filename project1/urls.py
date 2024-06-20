@@ -16,11 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app1.views import telugu
-from app1.views import hindi
+from app1.views import *
+from app2.views import *
+from app3.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('telugu/',telugu,name='telugu'),
     path('hindi/',hindi,name='hindi'),
+    path('wish1/',wish1,name='wish1'),
+    path('wish2/',wish2,name='wish2'),
+    path('company1/',company1,name='company1'),
+    path('company2/',company2,name='company2')
 ]
